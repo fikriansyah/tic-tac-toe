@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a8078800-6442-4616-a202-60e4599f28d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fila/demo/TicTacToeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fila/demo/TicTacToeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fila/demo/config/DatabaseLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fila/demo/config/DatabaseLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +127,7 @@
       <updated>1643073727826</updated>
       <workItem from="1643073732810" duration="5036000" />
       <workItem from="1643092096853" duration="591000" />
-      <workItem from="1643431537631" duration="40745000" />
+      <workItem from="1643431537631" duration="41455000" />
     </task>
     <servers />
   </component>
