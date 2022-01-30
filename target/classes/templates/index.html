@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:replace="fragments/base :: baseHead(~{::title}, ~{::script}, ~{::link})">
+    <title>Tic Tac Toe</title>
+
+    <script src="js/app-main.js"></script>
+
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+
+<div class="card" style="text-align: center">
+    <div class="card-body">
+        <h4 class="game-status">
+            <th:block th:switch="${playStatus}">
+                <div th:case="'WON'" class="alert alert-success" role="alert">
+                    You Won
+                </div>
+                <div th:case="'LOST'" class="alert alert-danger" role="alert">
+                    You lost
+                </div>
+                <div th:case="'DRAW'" class="alert alert-primary" role="alert">
+                    You draw
+                </div>
+            </th:block>
+        </h4>
+
+        <form id="form_input" th:action="@{/}" method="POST" class="form-inline">
+            <div class="form-floating">
+                <div>
+                    <label>Choose your hero:</label>
+                    <label> <input type="radio" class="checkbox" name="first_play" id="true" value="true" checked> X </label>
+                    <label> <input type="radio" class="checkbox" name="first_play" id="false" value="false"> O </label>
+                </div>
+            </div>
+            <div class="form-floating">
+                <div class="text-input">
+                    <label for="board_size">Board Size: </label>
+                    <input id="board_size" name="board_size" type="number"/>
+                </div>
+            </div>
+
+            <div class="btn-new-game-wrap">
+                <button id="btn-new-game" class="btn btn-success" role="button">Start</button>
+            </div>
+
+            <input id="is_game_over" type="hidden" th:value="${playStatus != 'IN_PROGRESS'}"/>
+            <input id="tile_id" name="tile_id" type="hidden" value=""/>
+            <input id="new_game" name="new_game" type="hidden" value=""/>
+        </form>
+
+        <table class="board">
+            <tr th:each="row, rowIter : ${board}" class="board-row">
+                <td th:each="tile, tileIter : ${row}">
+                    <div th:id="${rowIter.index} + '-' + ${tileIter.index}"
+                         class="board-row-tile"
+                         th:classappend="${tile != ''} ? ${tile} + '-value' : (${playStatus == 'IN_PROGRESS'} ? 'available')"
+                         th:text="${tile}">
+                        &nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
